@@ -11,10 +11,11 @@ import Plate from "../../public/assets/plate.svg";
 import Task from "../../public/assets/task.svg";
 import Popup from "./Popup";
 
-const ThirdSlide = () => {
+const ThirdSlide = ({ activeSlide }) => {
   const [popup, setPopup] = React.useState(false);
   return (
     <section className="third-slide">
+      <div className={`third-slide__overlay ${popup && "active"}`}></div>
       <div className="third-slide__images">
         <img className="third-slide__images-bottle" src={Bottle} alt="" />
         <img className="third-slide__images-left" src={BubblesLeft} alt="" />
@@ -42,11 +43,14 @@ const ThirdSlide = () => {
             <div className="third-slide__block-text-second third-slide__block-text__style">
               <img src={Task} alt="image" />A arcu cursus vitae
             </div>
-            <Button onClick={() => setPopup(true)}>Подробнее</Button>
+            <Button activeSlide={activeSlide} onClick={() => setPopup(true)}>
+              Подробнее
+            </Button>
           </div>
         </div>
       </div>
-      {popup && <Popup />}
+
+      {popup && <Popup setPopup={setPopup} />}
     </section>
   );
 };

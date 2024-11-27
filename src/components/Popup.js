@@ -1,6 +1,7 @@
 import React from "react";
 import "./Popup.scss";
 import Arrow from "../../public/assets/pagination.svg";
+import CloseBtn from "../../public/assets/btn_close.svg";
 
 const list = [
   {
@@ -37,12 +38,14 @@ const list = [
   },
 ];
 
-const Popup = () => {
+const Popup = ({ setPopup }) => {
   const [page, setPage] = React.useState(0);
 
   return (
     <section className="popup">
-      <h2>преимущества</h2>
+      <h2>преимущества </h2>
+      <button onClick={() => setPopup(false)} className="popup__close-btn" />
+
       <h1>
         bgend<span>xy</span>
       </h1>

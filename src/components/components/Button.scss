@@ -1,6 +1,5 @@
 .button {
     position: relative;
-
     width: 275px;
     height: 80px;
     border-radius: 80px;
@@ -9,20 +8,38 @@
     padding-right: 35px;
     text-align: right;
 
+    &__first-slide {
+        &::before {
+            content: "";
+            background-image: var(--icon-url);
+            background-image: url("../../../public/assets/arrow.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 25px 25px;
+        }
+    }
+
+    &__third-slide {
+        &::before {
+            content: "+";
+            color: white;
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+
     &::before {
-        content: "";
+
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         left: 20px;
         width: 50px;
         height: 48px;
+
         border-radius: 100%;
         background-color: #171717;
-        background-image: url("../../../public/assets/arrow.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 25px 25px;
+
         box-shadow: -2px -2px 7px 3px rgba(0, 0, 0, 0.3),
             3px 3px 6px 3px rgba(255, 255, 255, 0.3);
     }

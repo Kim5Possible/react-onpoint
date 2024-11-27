@@ -6,7 +6,7 @@ import VirusSmall from "../../public/assets/virus-small.png";
 import Sperm from "../../public/assets/sperm.png";
 import Button from "./components/Button";
 
-function Onpoint() {
+function Onpoint({ activeSlide, setActiveSlide }) {
   return (
     <section className="home">
       <div className="home__content">
@@ -14,7 +14,9 @@ function Onpoint() {
         <h1 className="home__text">
           это <span>не</span> коммерческое задание
           <Button
+            onClick={() => setActiveSlide(1)}
             style={{ position: "absolute", right: "100px", bottom: "20px" }}
+            activeSlide={activeSlide}
           >
             Что дальше?
           </Button>
