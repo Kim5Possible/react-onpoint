@@ -16,7 +16,7 @@ function App() {
       ),
       id: 0,
     },
-    { component: <SecondSlide />, id: 1 },
+    { component: <SecondSlide activeSlide={activeSlide} />, id: 1 },
     { component: <ThirdSlide activeSlide={activeSlide} />, id: 2 },
   ];
 

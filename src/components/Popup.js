@@ -52,7 +52,11 @@ const Popup = ({ setPopup }) => {
 
       <ul className="popup__list">
         {list[page].content.map((item) => (
-          <div key={item.id} className="popup__list-item">
+          <div
+            key={item.id}
+            className="popup__list-item"
+            style={{ "--delay": `${0.1}s` }}
+          >
             <span>0{item.id}</span>
             <li>{item.text}</li>
           </div>

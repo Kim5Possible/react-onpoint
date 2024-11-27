@@ -2,9 +2,8 @@
 
 .popup {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 25%;
-    transform: translateY(-50%);
     padding: 40px 100px 20px 200px;
     background-color: white;
     border-radius: 8%;
@@ -12,6 +11,7 @@
 
     @include s.lg {
         left: 17%;
+        top: 17%;
     }
 
     &__close-btn {
@@ -81,11 +81,17 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+            animation-delay: var(--delay, 0s);
 
             span {
                 color: #8cc9e8;
                 font-weight: 700;
             }
+
+
+
         }
     }
 
@@ -120,5 +126,15 @@
                 background-color: #FC6DA9;
             }
         }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

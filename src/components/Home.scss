@@ -58,7 +58,7 @@
         bottom: 0;
         width: 227px;
         z-index: 10;
-        animation: animate_grow 6s infinite;
+        animation: animate_grow 9s infinite;
     }
 
     &__virus-medium {
@@ -67,6 +67,7 @@
         right: 10%;
         width: 110px;
         z-index: 10;
+        animation: animate_move_circle 9s infinite linear;
     }
 
     &__virus-small-right {
@@ -75,6 +76,7 @@
         right: 20%;
         width: 63px;
         z-index: 10;
+        animation: animate_grow 6s infinite;
     }
 
     &__virus-small-left {
@@ -83,6 +85,7 @@
         left: 1%;
         width: 63px;
         z-index: 10;
+        animation: animate_move 10s infinite;
     }
 }
 
@@ -102,11 +105,28 @@
 
 @keyframes animate_move_circle {
     0% {
+        transform:
+            rotate(0deg) translate(30px) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform:
+            rotate(180deg) translate(30px) rotate(-180deg) scale(1.2);
+    }
+
+    100% {
+        transform:
+            rotate(360deg) translate(30px) rotate(-360deg) scale(1);
+    }
+}
+
+@keyframes animate_move {
+    0% {
         transform: translate(0, 0);
     }
 
     50% {
-        transform: translate(-15px, 0);
+        transform: translate(20px, 20px);
     }
 
     100% {

@@ -4,7 +4,7 @@ import SpermBig from "../../public/assets/sperm-big.png";
 import SpermMedium from "../../public/assets/sperm-medium.png";
 import SpermSmall from "../../public/assets/sperm-small.png";
 
-const SecondSlide = () => {
+const SecondSlide = ({ activeSlide }) => {
   return (
     <section className="second-slide">
       <div className="second-slide__block">
@@ -36,14 +36,27 @@ const SecondSlide = () => {
             sit amet massa vitae tortor condimentum lacinia quis vel.
           </p>
         </div>
-        <img className="second-slide__sperm-big" src={SpermBig} alt="image" />
+        <img
+          className="second-slide__sperm-big"
+          style={{
+            animation: activeSlide === 1 ? "animate_show 3s ease" : "none",
+          }}
+          src={SpermBig}
+          alt="image"
+        />
         <img
           className="second-slide__sperm-medium"
+          style={{
+            animation: activeSlide === 1 ? "animate_show 5s ease" : "none",
+          }}
           src={SpermMedium}
           alt="image"
         />
         <img
           className="second-slide__sperm-small"
+          style={{
+            animation: activeSlide === 1 ? "animate_show 7s ease" : "none",
+          }}
           src={SpermSmall}
           alt="image"
         />
