@@ -1,0 +1,81 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 40px 20px 240px;
+    background-color: white;
+    border-radius: 15%;
+
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 89px;
+        letter-spacing: 10px;
+        font-weight: 300;
+        margin-bottom: 20px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: 1.5px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        font-size: 23px;
+        font-weight: 300;
+        margin-bottom: 50px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            span {
+                color: #8cc9e8;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        &-left {
+            width: 9px;
+            display: flex;
+            align-items: center;
+        }
+
+        &-right {
+            width: 9px;
+            transform: scaleX(-1);
+            display: flex;
+            align-items: center;
+        }
+
+        &-page {
+            width: 9px;
+            height: 9px;
+            border-radius: 100%;
+            border: 1px solid #000000;
+
+            &__active {
+                width: 10px;
+                height: 10px;
+                border: none;
+                background-color: #FC6DA9;
+            }
+        }
+    }
+}

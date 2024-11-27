@@ -1,0 +1,30 @@
+.header {
+    position: fixed;
+    padding-top: 20px;
+    padding-left: 66px;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+
+
+    &__logo {
+        width: 25px;
+    }
+
+    &__line {
+        width: 1px;
+        height: 25px;
+        background-color: #171717;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    &__text {
+        font-size: 17px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}

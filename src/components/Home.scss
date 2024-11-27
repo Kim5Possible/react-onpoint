@@ -1,0 +1,88 @@
+@use "../screens.scss"as s;
+
+.home {
+    position: relative;
+    background: url("../../public/assets/bg-static-1.png"), url("../../public/assets/bg.png") no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: (5%, 0);
+
+    &__content {
+        max-width: 1024px;
+        height: 100vh;
+        margin: 0 auto;
+        padding-left: 43px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-bottom: 100px;
+    }
+
+    h2 {
+        font-size: 27px;
+        margin-bottom: 25px;
+        color: #242424;
+
+
+    }
+
+    h1 {
+        position: relative;
+        display: inline-block;
+        font-size: 102px;
+        font-weight: lighter;
+        letter-spacing: 9px;
+        z-index: 20;
+
+
+
+        span {
+            font-weight: 700;
+        }
+
+        img {
+            position: absolute;
+            top: -13%;
+            right: 0;
+            width: 600px;
+            z-index: 20;
+        }
+    }
+
+
+    &__virus-big {
+        position: absolute;
+        right: 20%;
+        bottom: 0;
+        width: 227px;
+        z-index: 10;
+    }
+
+    &__virus-medium {
+        position: absolute;
+        top: 23%;
+        right: 10%;
+        width: 110px;
+        z-index: 10;
+    }
+
+    &__virus-small-right {
+        position: absolute;
+        top: 10%;
+        right: 20%;
+        width: 63px;
+        z-index: 10;
+    }
+
+    &__virus-small-left {
+        position: absolute;
+        bottom: 28%;
+        left: 1%;
+        width: 63px;
+        z-index: 10;
+    }
+}
