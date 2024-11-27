@@ -1,4 +1,4 @@
-# URL gh-pages
+# URL gh-pages for iPad (1024x768)
 
 https://kim5possible.github.io/react-onpoint/
 
