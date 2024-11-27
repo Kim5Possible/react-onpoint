@@ -13,6 +13,9 @@ import Popup from "./Popup";
 
 const ThirdSlide = ({ activeSlide }) => {
   const [popup, setPopup] = React.useState(false);
+  React.useEffect(() => {
+    activeSlide !== 2 && setPopup(false);
+  }, [activeSlide]);
   return (
     <section className="third-slide">
       <div className={`third-slide__overlay ${popup && "active"}`}></div>

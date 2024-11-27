@@ -1,3 +1,5 @@
+@use "../screens.scss"as s;
+
 .second-slide {
     position: relative;
     background: url("../../public/assets/bg.png");
@@ -37,12 +39,16 @@
             &::before {
                 content: "";
                 position: absolute;
-                top: 38px;
+                top: 18px;
                 left: -25px;
                 width: 5px;
                 height: 370px;
                 background-color: black;
                 border-radius: 30px;
+
+                @include s.lg {
+                    top: 38px;
+                }
             }
         }
 

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Popup.scss";
 import Arrow from "../../public/assets/pagination.svg";
-import CloseBtn from "../../public/assets/btn_close.svg";
 
 const list = [
   {
